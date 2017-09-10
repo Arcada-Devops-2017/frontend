@@ -1,0 +1,26 @@
+language: python #define language
+
+addons:
+  firefox: "55.0.3" #installs firefox
+
+before_install:
+  - pip install -r requirements.txt #installs the requirements
+
+install: true #skip install
+
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3
+  - cd html #change directory to html
+  - python3 -m http.server & #create web server through python httpserver
+  - sleep 3
+  - cd -
+  - wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
+  - mkdir geckodriver
+  - tar zxvf geckodriver-v0.18.0-linux64.tar.gz -C geckodriver
+  - export PATH=$PATH:$PWD/geckodriver #download and set geckodriver
+
+script:
+  - pybot test-sample & #skips over because it gets stuck at get request atm
+  - pybot robot #run robot framework in robot directory
