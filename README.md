@@ -1,38 +1,70 @@
 # Front-end
 
-Instructions is written here.
+Run UI through various test environments before deployment.
 
-### Explanation
+### Project assignments
 
-Before robot test will work you will have to install Selenium2 library,
-Selenium 3.5.0 and Robot framework which can be run through requirements.txt file.
+* Github changes triggers Travis-CI
+* Configure build settings .travis.yml.
+* Install a web server.
+* Run robot test against the web server.
+* Deploy to S3 (through .travis.yml).
+* Empty Cloudfront cache and upload newer version.
+* Design the required HTML.
+
+## Getting Started
+
+### Robot framework installations
+
+Selenium2 library, Selenium 3.5.0 and Robot Framework have to be install.
+Install with following command.
 
 ```
 pip install -r requirements.txt
 ```
 
-Create a simple webserver through python3 to host our html files.
+### Create a simple HTTP server
+
+Following command will create a server at current directory.
 
 ```
 python3 -m http.server
 ```
 
-Run the robot test against the folder with robot files.
+### Execute robot test
+
+Runs the test configuration in respective folders.
 
 ```
 pybot robot
 pybot test-sample
 ```
 
-Simple explanation about travis file:
-- build configuration (installations etc).
-- continous intergration for automated testing.
-- used to create web server to test html against robot.
+### Travis configurations
 
-Look through the .travis.yml for better understanding.
+The file .travis.yml determined the build settings that's run through Travis CI.
+To be able to use, the user must enable github repository on [Travis-CI](https://travis-ci.org/),
+which require admin rights.
 
-### Learning material
+Travis usage cases:
+* Build configuration.
+* Continous intergration for automated testing.
+* Run robot test
 
-http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-data-syntax
-https://bitbucket.org/robotframework/webdemo
-https://www.youtube.com/watch?v=FEXY1ZP-sBs
+Look in .travis.yml for more information.
+
+## Materials
+
+### Tools
+* Travis CI
+* AWS S3
+* AWS Cloudfront
+* Robot Framework
+* Github
+
+### Links
+
+* [Robot Framework User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html) - The manual
+* [Robot Demo](https://bitbucket.org/robotframework/webdemo) - Robot framework demo
+* [Travis CI Youtube Tutorial](https://www.youtube.com/watch?v=FEXY1ZP-sBs) - Basic tutorial for Travis CI
+* [Github Commands](https://github.com/joshnh/Git-Commands) - Github terminal commands
