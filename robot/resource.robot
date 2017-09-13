@@ -9,5 +9,5 @@ ${BROWSER}        firefox
 Open Browser to application page
     Open Browser   ${URL}
 
-Check for Hello Testing in content
-    Page Should Contain     Hello testing
+Check for Hello World in content
+    Page Should Contain     Hello World
