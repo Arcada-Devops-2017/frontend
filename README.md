@@ -8,8 +8,7 @@ Run UI through various test environments before deployment.
 * Configure build settings .travis.yml.
 * Install a web server.
 * Run robot test against the web server.
-* Deploy to S3 (through .travis.yml).
-* Empty Cloudfront cache and upload newer version.
+* Deploy to server.
 * Design the required HTML.
 
 ## Getting Started
