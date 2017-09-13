@@ -24,6 +24,7 @@ script:
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_744ccfe88484_key -iv $encrypted_744ccfe88484_iv
   -in frontend_key.enc -out frontend_key -d
+- chmod 600 frontend_key
 
 deploy:
   - provider: script
