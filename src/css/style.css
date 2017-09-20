@@ -57,9 +57,9 @@ body, html {
     -moz-border-radius: 10;
     border-radius: 10px;
     font-family: Arial;
-    color: #000000;
+    color: #FFFFFF;
     font-size: 20px;
-    background: #80DED9;
+    background: F8BD7F;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
   }
@@ -70,10 +70,10 @@ body, html {
   }
 
   .cta-button2 {
-    background-color: #4D7471;
+    background-color: #FFB997;
     width: 24%;
     font-size: 10px;
-    color: white;
+    color: #C0BCBC;
     font-weight: bold;
     position: relative;
     z-index: 2;
@@ -84,8 +84,8 @@ body, html {
   }
 
   .cta-button2:hover {
-    background-color: #5A7C71;
-    color: white;
+    background-color: #FFB997;
+    color: #C0BCBC;
     font-weight: bold;
 
   }
