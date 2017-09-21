@@ -2,9 +2,9 @@
 Resource          resource.robot
 
 
-Test Setup      Open Browser to home page
+Test Setup      Open Browser To Home Page
 Test Teardown   Close Browser
-*** Test Cases ***
 
-Test string
-    Home Page Should Be Open
+*** Test Cases ***
+Check content on home page
+    Check If Contents Exist In Home Page

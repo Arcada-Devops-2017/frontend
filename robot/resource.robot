@@ -13,12 +13,11 @@ ${PRODUCTS URL}   ${SERVER}/products.html
 
 
 *** Keywords ***
-Open Browser to home page
+Open Browser To Home Page
     Open Browser   ${HOME URL}
     Maximize Browser Window
-    Home Page Should Be Open
 
-Home Page Should Be Open
+Check If Contents Exist In Home Page
     Title Should Be    The best web store ever
     Page Should Contain    it is super hyvä
     Page Should Contain    Sorry you cannot buy me but you can watch me
@@ -34,4 +33,4 @@ Check If Menu Toggle Is Working
 
 Login Page Should Be Open
     Location Should Be    ${LOGIN URL}
-    Title Should Be    the best web store ever  
+    Title Should Be    the best web store ever
