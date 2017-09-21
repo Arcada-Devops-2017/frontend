@@ -29,4 +29,5 @@ Check If Text String Exists On Home Page
 Check If Menu Toggle Is Working On Home Page
     Wait Until Element Is Visible    menuToggle
     Click Element    menuToggle
-    Click Element    link=Products
+    Wait Until Page Contains Element    link=Products
+    Click Link    Products
