@@ -29,9 +29,7 @@ Check If Text String Exists On Home Page
     Page Should Contain    Sign Up
     Page Should Contain    Log In
 
-Check If Buttons Is Working On Home Page
-    Click Element    cta-button
-    Click Element    cta-button2
-
 Check If Menu Toggle Is Working On Home Page
     Click Element    menuToggle
+    Wait Until Element Is Visible    Products
+    Click Element    link=Products
