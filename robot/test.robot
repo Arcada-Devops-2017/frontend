@@ -2,9 +2,9 @@
 Resource          resource.robot
 
 
-Test Setup      Open Browser to application page
+Test Setup      Open Browser to home page
 Test Teardown   Close Browser
 *** Test Cases ***
 
 Test string
-    Check for Hello World in content
+    Home Page Should Be Open
