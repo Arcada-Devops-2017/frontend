@@ -27,15 +27,8 @@ Check If Text String Exists On Home Page
     Page Should Contain    Log In
 
 Check If Menu Toggle Is Working On Home Page
+    Wait Until Element Is Visible    menuToggle
     Click Element    menuToggle
-    Click On Links On Menu Bar
-
-Click On Links On Menu Bar
     Wait Until Element Is Visible    link=Products
-    Wait Until Element Is Visible    link=Home
-    Wait Until Element Is Visible    link=Sign Up
-    Wait Until Element Is Visible    link=Log In
-    Click Link    link=Products
-    Click Link    link=Home
-    Click Link    link=Sign Up
-    Click Link    link=Log In
+    Sleep    5
+    Click Element    link=Products
