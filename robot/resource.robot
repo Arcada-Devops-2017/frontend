@@ -16,20 +16,22 @@ ${PRODUCTS URL}   ${SERVER}/products.html
 Open Browser To Home Page
     Open Browser   ${HOME URL}
 
-Check If Contents Exist In Home Page
+Check If Title Is Correct On Home Page
     Title Should Be    The best web store ever
+
+Check If Text String Exists On Home Page
     Page Should Contain    it is super hyvä
     Page Should Contain    Sorry you cannot buy me but you can watch me
     Page Should Contain    Hello there
     Page Should Contain    test press now
+    Page Should Contain    Home
+    Page Should Contain    Products
+    Page Should Contain    Sign Up
+    Page Should Contain    Log In
 
-Check If Buttons Is Working
+Check If Buttons Is Working On Home Page
     Click Button    cta-button
     Click Button    cta-button2
 
-Check If Menu Toggle Is Working
+Check If Menu Toggle Is Working On Home Page
     Click Button    menuToggle
-
-Login Page Should Be Open
-    Location Should Be    ${LOGIN URL}
-    Title Should Be    the best web store ever

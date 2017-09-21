@@ -6,5 +6,14 @@ Test Setup      Open Browser To Home Page
 Test Teardown   Close Browser
 
 *** Test Cases ***
-Check content on home page
-    Check If Contents Exist In Home Page
+Check all text string exists on home page.
+    Check If Text String Exists On Home Page
+
+Check if the title is correct.
+    Check If Title Is Correct On Home Page
+
+Check if all buttons are working.
+    Check If Buttons Is Working On Home Page
+
+Check if menu is toggable.
+    Check If Menu Toggle Is Working On Home Page
