@@ -28,3 +28,13 @@ Check If Text String Exists On Home Page
 
 Check If Menu Toggle Is Working On Home Page
     Click Element    menuToggle
+
+Click On Links On Menu Bar
+    Wait Until Element Is Visible    link=Products
+    Wait Until Element Is Visible    link=Home
+    Wait Until Element Is Visible    link=Sign Up
+    Wait Until Element Is Visible    link=Log In
+    Click Link    link=Products
+    Click Link    link=Home
+    Click Link    link=Sign Up
+    Click Link    link=Log In
