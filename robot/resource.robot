@@ -15,7 +15,6 @@ ${PRODUCTS URL}   ${SERVER}/products.html
 *** Keywords ***
 Open Browser To Home Page
     Open Browser   ${HOME URL}
-    Maximize Browser Window
 
 Check If Contents Exist In Home Page
     Title Should Be    The best web store ever
