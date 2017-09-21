@@ -30,8 +30,11 @@ Check If Text String Exists On Home Page
     Page Should Contain    Log In
 
 Check If Buttons Is Working On Home Page
+    Wait Until Element Contains    cta-button    BUY NOW
+    Wait Until Element Contains    cta-button2    test press now
     Click Button    cta-button
     Click Button    cta-button2
 
 Check If Menu Toggle Is Working On Home Page
+    Wait Until Element Contains    menuToggle
     Click Button    menuToggle
