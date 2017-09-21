@@ -21,9 +21,6 @@ Check If Title Is Correct On Home Page
 
 Check If Text String Exists On Home Page
     Page Should Contain    it is super hyvä
-    Page Should Contain    Sorry you cannot buy me but you can watch me
-    Page Should Contain    Hello there
-    Page Should Contain    test press now
     Page Should Contain    Home
     Page Should Contain    Products
     Page Should Contain    Sign Up
