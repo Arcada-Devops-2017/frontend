@@ -27,7 +27,6 @@ Check If Text String Exists On Home Page
     Page Should Contain    Log In
 
 Check If Menu Toggle Is Working On Home Page
-    Wait Until Element Is Visible    menuToggle
     Click Element    menuToggle
-    Wait Until Element Is Visible    link=Log In
-    Click Element    link=Log In
+    Wait Until Element Is Visible    products.html
+    Click Element    products.html
