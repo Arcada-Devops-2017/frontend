@@ -28,5 +28,7 @@ Check If Text String Exists On Home Page
 
 Check If Menu Toggle Is Working On Home Page
     Click Element    menuToggle
-    Wait Until Page Contains Element    products.html
-    Click Link    products.html
+    Click Element   products
+    Click Element   index
+    Click Element   signup
+    Click Element   login
