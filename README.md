@@ -5,11 +5,12 @@ Run UI through various test environments before deployment.
 ### Project assignments
 
 * Github changes triggers Travis-CI
-* Configure build settings .travis.yml.
-* Install a web server.
-* Run robot test against the web server.
-* Deploy to server.
-* Design the required HTML.
+* Configure build settings .travis.yml. (OK)
+* Install a web server. (OK)
+* Run robot test against the web server. (IN PROGRESS)
+* Deploy to server. (OK)
+* Design the required HTML. (IN PROGRESS)
+* Write JS to connect with backend. (IN PROGRESS)
 
 ## Getting Started
 
@@ -56,8 +57,10 @@ Look in .travis.yml for more information.
 
 ### Tools
 * Travis CI
-* AWS S3
-* AWS Cloudfront
+* JQUERY
+* HTML / CSS
+* Javascript
+* Ajax
 * Robot Framework
 * Github
 
