@@ -4,7 +4,7 @@ Run UI through various test environments before deployment.
 
 ### Project assignments
 
-* Github changes triggers Travis-CI
+* Github changes triggers Travis-CI (OK)
 * Configure build settings .travis.yml. (OK)
 * Install a web server. (OK)
 * Run robot test against the web server. (IN PROGRESS)

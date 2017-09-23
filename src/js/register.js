@@ -11,10 +11,10 @@ function register(){
   @dev get input information from html fields.
   */
   var input = {
-    first_name: document.getElementById("first_name").value,
-    last_name: document.getElementById("last_name").value,
-    username: document.getElementById("username").value,
-    password: document.getElementById("password").value
+    first_name: $("first_name").val(),
+    last_name: $("last_name").val(),
+    username: $("username").val(),
+    password: $("password").val()
   }
 
   /*
@@ -26,10 +26,11 @@ function register(){
      data: JSON.stringify(input),
      dataType: 'application/json',
      contentType: "application/json",
-     success: function (data) {
+     success: function (result) {
        /*
        @dev if success then redirect to homepage or login page for example.
        */
+       alert(result.status);
      },
      error: function(){
        /*
