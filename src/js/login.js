@@ -1,6 +1,9 @@
 /*
 @dev not sure if this is working.
+     variable that holds retrieved token.
 */
+var token = "";
+
 function login(){
   /*
   @dev set the authentication.
@@ -25,13 +28,12 @@ function login(){
      data: JSON.stringify(input),
      dataType: 'application/json',
      contentType: "application/json",
-     statusCode: {
-       200: function(data) {
-         var token = data.token;
-       },
-       404: function(data) {
-         alert("Error message: " + data.status)
-       }
+     success: function (result) {
+       if(result.status == 200) {
+       token = result.token;
+     } else {
+       alert(result.status);
+     }
      }
   });
 }
