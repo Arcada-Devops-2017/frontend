@@ -14,3 +14,6 @@ Check if the title is correct.
 
 Check if menu is toggable.
     Check If Menu Toggle Is Working On Home Page
+
+Check if links inside menu is clickable
+    Check If Links Are Working

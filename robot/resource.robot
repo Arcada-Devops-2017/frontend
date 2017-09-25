@@ -28,5 +28,7 @@ Check If Text String Exists On Home Page
 
 Check If Menu Toggle Is Working On Home Page
     Click Element    menuToggle
-    Wait Until Element Is Visible    xpath=(a[contains(text(),'Products')])
-    Click Link    xpath=(a[contains(text(),'Products')])
+
+Check If Links Are Working
+    Wait Until Element Is Visible    link=Products
+    Click Element    link=Products
