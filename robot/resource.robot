@@ -28,6 +28,5 @@ Check If Text String Exists On Home Page
 
 Check If Menu Toggle Is Working On Home Page
     Click Element    menuToggle
-    Wait Until Element is Visible menuToggle
-    Wait until Element is Visible id=products
-    Click Element    xpath=//div[@id='menuToggle']//ul[@id='menu']//a[@id='products']
+    Wait Until Element Is Visible    xpath=(a[contains(text(),'Products')])
+    Click Link    xpath=(a[contains(text(),'Products')])
