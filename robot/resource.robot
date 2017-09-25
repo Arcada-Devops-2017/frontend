@@ -30,4 +30,10 @@ Check If Menu Toggle Is Working On Home Page
     Click Element    menuToggle
 
 Check If Links Are Working
-    Click Element    link=Products
+    Click Element  href=products.html
+
+Check If Links Are Working 2
+    Click Element  id=products
+
+Check If Links Are Working 3
+    Click Element  link=Products

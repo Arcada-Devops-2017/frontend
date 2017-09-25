@@ -17,3 +17,9 @@ Check if menu is toggable.
 
 Check if links inside menu is clickable
     Check If Links Are Working
+
+Check if links inside menu is clickable 2
+    Check If Links Are Working 2
+
+Check if links inside menu is clickable 3
+    Check If Links Are Working 3
