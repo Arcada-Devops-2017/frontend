@@ -15,11 +15,8 @@ Check if the title is correct.
 Check if menu is toggable.
     Check If Menu Toggle Is Working On Home Page
 
-Check if links inside menu is clickable
-    Check If Links Are Working
+Check if sign up works
+    Check If Product Link Is Working
 
-Check if links inside menu is clickable 2
-    Check If Links Are Working 2
-
-Check if links inside menu is clickable 3
-    Check If Links Are Working 3
+Check if product works
+    Check If Sign Up Link Is Working

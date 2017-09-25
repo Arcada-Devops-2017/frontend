@@ -29,11 +29,10 @@ Check If Text String Exists On Home Page
 Check If Menu Toggle Is Working On Home Page
     Click Element    menuToggle
 
-Check If Links Are Working
-    Click Element  href=products.html
+Check If Sign Up Link Is Working
+    Wait Until Element Is Visible    link=Sign Up
+    Click Element  link=Sign Up
 
-Check If Links Are Working 2
-    Click Element  id=products
-
-Check If Links Are Working 3
+Check If Product Link Is Working
+    Wait Until Element Is Visible    link=Products
     Click Element  link=Products
