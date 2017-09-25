@@ -6,6 +6,8 @@ function orders(token){
   /*
   @dev nuff said. specify the domain which has the api.
   */
+
+  var token = window.localStorage.getItem(AuthToken);
   var url = "orders.arcada.nitor.zone/";
 
   /*

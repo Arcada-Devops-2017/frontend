@@ -2,7 +2,6 @@
 @dev not sure if this is working.
      variable that holds retrieved token.
 */
-var token = "";
 
 function login(){
   /*
@@ -21,6 +20,7 @@ function login(){
   /*
   @dev connect to url, convert data to JSON, post data.
        wait for request to come back if true then proceed.
+       window.localStorage.getItem(key); - get the token.
   */
   $.ajax({
      url: auth + "login.php",
@@ -30,7 +30,7 @@ function login(){
      contentType: "application/json",
      success: function (result) {
        if(result.status == 200) {
-       token = result.token;
+       window.localStorage.setItem(AuthToken, result.token);
      } else {
        alert(result.status);
      }
