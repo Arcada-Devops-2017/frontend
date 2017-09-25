@@ -34,5 +34,7 @@ Check If Sign Up Link Is Working
     Click Element  link=Sign Up
 
 Check If Product Link Is Working
-    Wait Until Element Is Visible    link=Products     30s
+    Click Button
+    Wait Until Element Is Visible    link=Products
+    Sleep    3
     Click Element  link=Products
