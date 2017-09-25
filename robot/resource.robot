@@ -30,5 +30,5 @@ Check If Menu Toggle Is Working On Home Page
     Click Element    menuToggle
 
 Check If Links Are Working
-    Wait Until Element Is Visible    link=Products
+  Wait Until Element Is Visible     link=Products     timeout=10
     Click Element    link=Products
