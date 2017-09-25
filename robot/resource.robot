@@ -14,7 +14,7 @@ ${PRODUCTS URL}   ${SERVER}/products.html
 
 *** Keywords ***
 Open Browser To Home Page
-    Open Browser   ${HOME URL}
+    Open Browser    ${HOME URL}    ${BROWSER}
 
 Check If Title Is Correct On Home Page
     Title Should Be    The best web store ever
@@ -30,9 +30,9 @@ Check If Menu Toggle Is Working On Home Page
     Click Element    menuToggle
 
 Check If Sign Up Link Is Working
-    Wait Until Element Is Visible    link=Sign Up
+    Wait Until Element Is Visible    link=Sign Up     30s
     Click Element  link=Sign Up
 
 Check If Product Link Is Working
-    Wait Until Element Is Visible    link=Products
+    Wait Until Element Is Visible    link=Products     30s
     Click Element  link=Products
