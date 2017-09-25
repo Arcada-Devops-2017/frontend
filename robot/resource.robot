@@ -13,28 +13,18 @@ ${PRODUCTS URL}   ${SERVER}/products.html
 
 
 *** Keywords ***
-Open Browser To Home Page
-    Open Browser    ${HOME URL}    ${BROWSER}
+Open browser to home page
+    Open Browser    ${HOME URL}
 
-Check If Title Is Correct On Home Page
+Check if title is correct
     Title Should Be    The best web store ever
 
-Check If Text String Exists On Home Page
-    Page Should Contain    it is super hyvä
+Check home page for important strings
+    Page Should Contain    BEER OF THE MONTH
     Page Should Contain    Home
     Page Should Contain    Products
     Page Should Contain    Sign Up
     Page Should Contain    Log In
 
-Check If Menu Toggle Is Working On Home Page
+Click on menu
     Click Element    menuToggle
-
-Check If Sign Up Link Is Working
-    Wait Until Element Is Visible    link=Sign Up     30s
-    Click Element  link=Sign Up
-
-Check If Product Link Is Working
-    Click Button
-    Wait Until Element Is Visible    link=Products
-    Sleep    3
-    Click Element  link=Products
