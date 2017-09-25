@@ -30,4 +30,5 @@ Check If Menu Toggle Is Working On Home Page
     Wait Until Element Is Visible    menuToggle
     Click Element    menuToggle
     Wait Until Element Is Visible    products
+    Wait Until Element Is Enabled    products
     Click Element    products
