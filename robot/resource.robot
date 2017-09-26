@@ -28,6 +28,3 @@ Check home page for important strings
 
 Click on menu
     Click Element    menuToggle
-
-Check if logo exist for home page
-    Page Should Contain Image    logo
