@@ -1,18 +1,41 @@
 *** Settings ***
+Library           Selenium2Library
 Resource          resource.robot
 
-Test Setup      Open browser to home page
+Test Setup      Before Initiation
 Test Teardown   Close Browser
 
+*** Variables ***
+${LINK MENU}          css=#menuToggle>input
+${MENU SIGN}          xpath=.//*[@id='signup']/li
+${MENU PRODUCTS}      xpath=.//*[@id='products']/li
+${MENU LOGIN}         xpath=.//*[@id='login']/li
+${MENU INDEX}         xpath=.//*[@id='index']/li
+${TITLE}              The best web store ever
+
 *** Test Cases ***
-Check if home page contains all important strings
-    Check home page for important strings
 
-Check if the title is correct
-    Check if title is correct
+Valid Title
+    Title Should Be         ${TITLE}
 
-Check if menu toggle id exist
-    Check if element menu toggle exist
+Check Strings On Home Page
+    Page Should Contain    BEER OF THE MONTH
+    Page Should Contain    Home
+    Page Should Contain    Products
+    Page Should Contain    Sign Up
+    Page Should Contain    Log In
 
-Check if links are clickable
-    Check if all links in menu bar works
+Toggle Menu Bar (ON/OFF)
+    Click Element      ${LINK MENU}
+    Click Element      ${LINK MENU}
+
+Check All Links On Home Page
+    Click Element    ${LINK MENU}
+    Sleep    1
+    Click Element    ${MENU LOGIN}
+    Go Back
+    Click Element    ${MENU PRODUCTS}
+    Go Back
+    Click Element    ${MENU SIGN}
+    Go Back
+    Click Element    ${MENU INDEX}
