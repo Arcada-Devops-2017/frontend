@@ -23,3 +23,9 @@ Before Initiation
 
 Open Sign Up Page
     Open Browser    ${SIGNUP URL}
+
+Before Menu Bar Test
+    [Arguments]         ${webpage}
+    Open Browser        ${webpage}
+    Click Element       ${LINK MENU}
+    Sleep    1
