@@ -26,5 +26,20 @@ Check home page for important strings
     Page Should Contain    Sign Up
     Page Should Contain    Log In
 
-Click on menu
-    Click Element    menuToggle
+Check if element menu toggle exist
+    Click Element      xpath=.//*[@id='menuToggle']
+
+Check if all links in menu bar works
+    Click Element    css=#menuToggle>input
+    Sleep    2
+    Click Element    xpath=.//*[@id='signup']/li
+    Sleep    2
+    Go Back
+    Click Element    xpath=.//*[@id='products']/li
+    Sleep    2
+    Go Back
+    Click Element    xpath=.//*[@id='login']/li
+    Sleep    2
+    Go Back
+    Click Element    xpath=.//*[@id='index']/li
+    Sleep    2
