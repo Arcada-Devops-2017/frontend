@@ -30,4 +30,4 @@ Click on menu
     Click Element    menuToggle
 
 Check if logo exist for home page
-    Page Should Contain Image    id=logo
+    Page Should Contain Image    logo
