@@ -18,11 +18,9 @@ ${TITLE}              The best web store ever
 
 
 *** Keywords ***
-Before Initiation
-    Open Browser    ${HOME URL}
-
-Open Sign Up Page
-    Open Browser    ${SIGNUP URL}
+Open URL
+    [Arguments]         ${webpage}
+    Open Browser        ${webpage}
 
 Before Menu Bar Test
     [Arguments]         ${webpage}

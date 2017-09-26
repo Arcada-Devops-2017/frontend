@@ -2,7 +2,7 @@
 Library           Selenium2Library
 Resource          resource.robot
 
-Test Setup      Open Sign Up Page
+Test Setup      Open URL    ${SIGNUP URL}
 Test Teardown   Close Browser
 Test Template   Check If Strings Exist
 

@@ -2,7 +2,7 @@
 Library           Selenium2Library
 Resource          resource.robot
 
-Test Setup      Before Initiation
+Test Setup      Open URL    ${HOME URL}
 Test Teardown   Close Browser
 
 *** Test Cases ***
