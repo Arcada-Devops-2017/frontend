@@ -14,6 +14,3 @@ Check if the title is correct.
 
 Check if menu is clickable.
     Click on menu
-
-Check if logo image exist
-    Check if logo exist for home page
