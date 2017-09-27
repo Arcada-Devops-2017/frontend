@@ -1,0 +1,10 @@
+/*
+ * CSS for products
+ */
+
+ .product_gallery{margin: 0 auto;width:1000px;list-style:none;}
+ .product_gallery li{float:center; width:200px;margin-right:50px;border: 1px solid #999;}
+ .product_gallery li img{width: 200px;height: 300px;float:center}
+ .product_description{display: none;position: absolute;width:300px;}
+ .product_information{height: 40px; background:#E6C79C;width:100%;float:left;}
+ .product_information h4{float:left;color:#2E4057;width:60%;margin:5px;}
