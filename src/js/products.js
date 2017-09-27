@@ -1,13 +1,15 @@
 /*
-@dev not sure if this is working.
+@dev not sure if this is working. refreshes all the time!
 */
+products();
+
 function products(){
 
   /*
   @dev display all the products on html id list_products.
        iterate through the existing list of products.
   */
-  var url = "product.arcada.nitor.zone/";
+  var url = "http://product.arcada.nitor.zone/";
 
   /*
   @dev get json from url, specify the data on which row on .each.
