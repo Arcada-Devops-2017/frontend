@@ -25,7 +25,7 @@ $(document).ready(function(){
       */
       $.ajax({
          url: auth + "login.php",
-         method: "POST",
+         type: "POST",
          data: JSON.stringify(input),
          dataType: 'application/json',
          contentType: "application/json",
