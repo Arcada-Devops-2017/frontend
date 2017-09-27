@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#register_button").click(function(){
+    $("button[class*='signupbtn']").click(function(){
       /*
       @dev set the authentication.
       */
