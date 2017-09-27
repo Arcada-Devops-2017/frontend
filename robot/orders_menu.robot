@@ -2,7 +2,7 @@
 Library           Selenium2Library
 Resource          resource.robot
 
-Suite Setup           Before Menu Bar Test    ${PRODUCTS URL}
+Suite Setup           Before Menu Bar Test    ${ORDERS URL}
 Test Template         Check If Menu Links Are Working
 
 *** Test Cases ***           LINK

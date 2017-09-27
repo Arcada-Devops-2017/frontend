@@ -2,7 +2,7 @@
 Library           Selenium2Library
 Resource          resource.robot
 
-Suite Setup           Open URL        ${SIGNUP URL}
+Suite Setup           Go To        ${SIGNUP URL}
 Suite Teardown        Close Browser
 Test Template         Check If Strings Exist
 

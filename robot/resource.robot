@@ -8,7 +8,7 @@ ${HOME URL}       ${SERVER}/index.html
 ${LOGIN URL}      ${SERVER}/login.html
 ${PRODUCTS URL}   ${SERVER}/products.html
 ${SIGNUP URL}     ${SERVER}/signup.html
-${PRODUCTS URL}   ${SERVER}/products.html
+${ORDERS URL}     ${SERVER}/orders.html
 ${LINK MENU}          css=#menuToggle>input
 ${MENU SIGN}          xpath=.//*[@id='signup']/li
 ${MENU PRODUCTS}      xpath=.//*[@id='products']/li
@@ -24,6 +24,6 @@ Open URL
 
 Before Menu Bar Test
     [Arguments]         ${webpage}
-    Open Browser        ${webpage}
+    Go To               ${webpage}
     Click Element       ${LINK MENU}
     Sleep    1

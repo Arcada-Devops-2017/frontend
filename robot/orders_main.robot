@@ -2,7 +2,7 @@
 Library           Selenium2Library
 Resource          resource.robot
 
-Suite Setup           Go To        ${SIGNUP URL}
+Suite Setup      Go To    ${ORDERS URL}
 
 *** Test Cases ***
 

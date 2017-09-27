@@ -3,7 +3,6 @@ Library           Selenium2Library
 Resource          resource.robot
 
 Suite Setup           Before Menu Bar Test    ${HOME URL}
-Suite Teardown        Close Browser
 Test Template         Check If Menu Links Are Working
 
 *** Test Cases ***           LINK

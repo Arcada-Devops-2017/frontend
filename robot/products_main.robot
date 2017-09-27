@@ -2,9 +2,8 @@
 Library           Selenium2Library
 Resource          resource.robot
 
-Test Setup      Open URL    ${PRODUCTS URL}
+Suite Setup      Go To    ${PRODUCTS URL}
 
-Test Teardown   Close Browser
 
 *** Test Cases ***
 

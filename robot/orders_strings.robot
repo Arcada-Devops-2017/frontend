@@ -2,11 +2,11 @@
 Library           Selenium2Library
 Resource          resource.robot
 
-Suite Setup           Go To        ${PRODUCTS URL}
+Suite Setup           Go To        ${ORDERS URL}
 Test Template         Check If Strings Exist
 
-*** Test Cases ***                       STRING
-Contains Här kommer produkter            Här kommer produkter
+*** Test Cases ***                             STRING
+Contains Your orders, dear customer            Your orders, dear customer
 
 *** Keywords ***
 Check If Strings Exist
