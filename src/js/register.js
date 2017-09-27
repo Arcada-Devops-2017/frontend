@@ -9,10 +9,10 @@ $(document).ready(function(){
       @dev get input information from html fields.
       */
       var input = {
-        first_name: $("firstname").val(),
-        last_name: $("lastname").val(),
-        username: $("email").val(),
-        password: $("psw").val()
+        first_name: $("input[name*='firstname']").val(),
+        last_name: $("input[name*='lastname']").val(),
+        username: $("input[name*='email']").val(),
+        password: $("input[name*='psw']").val()
       }
 
       /*
@@ -22,23 +22,19 @@ $(document).ready(function(){
          url: auth + "register.php",
          method: "POST",
          data: JSON.stringify(input),
-         dataType: 'application/json',
          contentType: "application/json",
          success: function (result) {
            /*
            @dev if success then redirect to homepage or login page for example.
            */
-           if(result.status == 200) {
-             alert("Status: " +result.status)
-           } else {
-             alert("Error, failed:" +result.status)
-           }
+           alert("Successfully connected, status: " + result.status)
         },
-         error: function(){
+         error: function(result){
+           alert("Error message: " + result.status)
            /*
            @dev should alert the failure data.
            */
-         }
+          }
       });
     });
 });
