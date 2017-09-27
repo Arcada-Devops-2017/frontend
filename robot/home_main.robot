@@ -2,10 +2,10 @@
 Library           Selenium2Library
 Resource          resource.robot
 
-Test Setup      Open URL    ${HOME URL}
-Test Teardown   Close Browser
 
 *** Test Cases ***
+Open A Page
+    Open URL    ${HOME URL}
 
 Valid Title
     Title Should Be         ${TITLE}
@@ -13,3 +13,4 @@ Valid Title
 Toggle Menu Bar (ON/OFF)
     Click Element      ${LINK MENU}
     Click Element      ${LINK MENU}
+    Close Browser

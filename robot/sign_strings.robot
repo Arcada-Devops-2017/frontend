@@ -2,9 +2,9 @@
 Library           Selenium2Library
 Resource          resource.robot
 
-Test Setup      Open URL    ${SIGNUP URL}
-Test Teardown   Close Browser
-Test Template   Check If Strings Exist
+Suite Setup           Open URL        ${SIGNUP URL}
+Suite Teardown        Close Browser
+Test Template         Check If Strings Exist
 
 *** Test Cases ***                       STRING
 Contains FIRST NAME                      FIRST NAME
