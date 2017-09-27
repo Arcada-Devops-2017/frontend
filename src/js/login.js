@@ -1,12 +1,12 @@
 /*
-@dev not sure if this is working.
+@dev in progress.
      variable that holds retrieved token.
 */
-
 $(document).ready(function(){
     $("button[type*='submit']").click(function(){
+
       /*
-      @dev set the authentication.
+      @dev set the authentication url, only works local (Arcada's network).
       */
       var auth = "http://auth.arcada.nitor.zone/";
 
