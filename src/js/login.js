@@ -8,7 +8,7 @@ $(document).ready(function(){
       /*
       @dev set the authentication.
       */
-      var auth = "auth.arcada.nitor.zone/";
+      var auth = "http://auth.arcada.nitor.zone/";
 
       /*
       @dev get input information from html fields.
@@ -32,11 +32,11 @@ $(document).ready(function(){
          success: function (result) {
            window.localStorage.setItem(AuthToken, result.token);
            console.log(result)
-           alert("Successful.")
+           alert("Successful execution.")
          },
          error: function (result) {
            console.log(result)
-           alert("Error:" + result.status)
+           alert("Failure to execute:" + result.status)
          }
          });
     });
