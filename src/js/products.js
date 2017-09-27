@@ -18,15 +18,24 @@ function products(){
   */
   $.getJSON(url + "api/list-products.php", function(data) {
     $.each(data.products, function() {
-      $('#list_products').append(
-        this.id + " "
-        + this.name + " "
-        + this.price + " "
-        + this.description + " "
-        + this.category + " "
-        + this.picture + " "
-        + this.tags
-      );
+      var $image = $('<img src>').text(this.picture);
+      var $name = $('<h4>').text(this.price);
+      var $price = $('<span>').text(this.price);
+      var $description = this.description;
+
+
+      $("ul[class*='product_gallery']")
+      .append("<li>")
+      .append($image)
+      .append("<div class='product_information'>")
+      .append($name)
+      .append($price)
+      .append("</div>")
+      .append("<div class='product_description'>")
+      .append("<p>"+$description+"</p>")
+      .append("<a href='#' class='buy now'>Buy now</a>")
+      .append("</div>")
+      .append("</li>");
     });
   });
 }
