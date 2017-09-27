@@ -27,9 +27,11 @@ $(document).ready(function(){
            /*
            @dev if success then redirect to homepage or login page for example.
            */
+           console.log(result);
            alert("Successfully connected, status: " + result.status)
         },
          error: function(result){
+           console.log(result);
            alert("Error message: " + result.status)
            /*
            @dev should alert the failure data.
