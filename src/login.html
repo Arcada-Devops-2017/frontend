@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
+    <div id="logo"></div>
 
 <nav role="navigation">
         <div id="menuToggle">      
@@ -28,22 +29,48 @@
         </div>
       </nav>
 
+<!--LOGIN POPUP-->
+<button class="signin-button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
-<p>Log in here</a>.</p>
-  <div class="container">
-    <label><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required>
+<div id="id01" class="modal">
 
-    <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+  <form class="modal-content animate" action="/Login.php">
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+  
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+  
+      <button type="submit">Login</button>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="password">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
 
-    <button type="submit">Login</button>
+<div class="wrapper">
+  <div class="box-content a">
+    <p>Log in here</a>.</p>
+      <div class="container">
+        <label><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" required>
+
+          <label><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" required>
+
+          <button type="submit">Login</button>
+      </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="password">Forgot <a href="#">password?</a></span>
+    </div>
   </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="password">Forgot <a href="#">password?</a></span>
-  </div>
+</div>
 
 
 <script>
