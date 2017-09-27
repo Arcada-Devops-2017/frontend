@@ -19,7 +19,6 @@ Register User Demo
     Input Text    xpath=html/body/div[2]/div[3]/input[2]          ${lastname}
     Input Text    xpath=html/body/div[2]/div[3]/input[3]          ${email}
     Input Text    xpath=html/body/div[2]/div[3]/input[4]          ${password}
-    Click Element    xpath=html/body/div[2]/div[3]/div/button[2]
 
 Cancel Registration
     Click Element    xpath=html/body/div[2]/div[3]/div/button[1]
