@@ -35,7 +35,7 @@ $(document).ready(function(){
            alert("You have succefully registered through auth API.\nHTTP response status: " + obj.status);
          },
          error: function (result) {
-           console.log(result)
+           console.log(result);
            var obj = JSON.parse(result);
            alert("Failed to registered through auth API.\nHTTP response status: " + obj.status);
          }
