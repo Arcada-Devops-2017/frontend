@@ -28,7 +28,7 @@ $(document).ready(function(){
            @dev if success then redirect to homepage or login page for example.
            */
            console.log(result);
-           alert("You have succefully registered through auth API.\nHTTP response status: " + result.status);
+           alert("You have succefully registered through auth API.\nHTTP response status: " + result.status + "\n" + result.token);
         },
          error: function(result){
            console.log(result);
