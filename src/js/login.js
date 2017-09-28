@@ -31,7 +31,7 @@ $(document).ready(function(){
          success: function (result) {
            console.log(result);
            var obj = JSON.parse(result);
-           window.localStorage.setItem(authToken, obj.token);
+           window.localStorage.setItem("authToken", obj.token);
            alert("You have succefully registered through auth API.\nHTTP response status: " + obj.status);
          },
          error: function (result) {
