@@ -7,10 +7,16 @@ function orders(){
   /*
   @dev nuff said. specify the domain which has the api.
   */
-
-  var token = window.localStorage.getItem(AuthToken);
-  var url = 'orders.arcada.nitor.zone/api/FetchAll?AuthToken="'+token+'"';
-  //var url = 'http://people.arcada.fi/~bomanbjo/DevOps/ordersReturnJson.json';
+	try{
+		var token = window.localStorage.getItem(AuthToken);
+		var url = 'orders.arcada.nitor.zone/api/FetchAll?AuthToken="'+token+'"';
+	}catch(error){
+		var errorMessageOrders = "<h1>An error has occured</h1></br><p>Please try again</br>Invalid authToken</br>You may not be logged in</p>";
+		
+		document.getElementById("orders-box").innerHTML = errorMessage;
+		
+		console.log('There has been a problem in your ORDERS fetch operation: ' + error.message);
+	}
 
   /*
   @dev the function require a token in the parameter.
@@ -18,6 +24,8 @@ function orders(){
        the shipping information is displayed in a html id named shipping_info.
   */
   var jsonResponse;
+  var myTable = ""; 
+  
   //makes the API-call for orders
   fetch(url).then(function(response) {
 		// Convert to JSON   
@@ -25,49 +33,65 @@ function orders(){
 	}).then(function(orderResponse) {
 		// orderResponse is a javascript json object
 		console.log(orderResponse); 
-		var jsonResponse = orderResponse.orderData;
-
-		var myTable = ""; 
-		
-		//writes html code for boxes and tables into a 
-		for(i = 0;i < orderResponse.orderData.length; i++){
+	
+			//loop for oldest order first
+			/*for(i = 0;i < orderResponse.orderData.length; i++){
+				var productId = jsonResponse[i].product.id;
+				var productAmount = jsonResponse[i].product.amount;
+				var storeId = orderResponse.orderData[i].product.storeId;
+				*/
 				
-			var productId = jsonResponse[i].product.id;
-			var productAmount = jsonResponse[i].product.amount;
+			//loop for newest order first
+			//gets product information from product-list based on productId from orders
+			for(i = orderResponse.orderData.length;i > 0; i--){
+				var productId = orderResponse.orderData[i-1].product.id;
+				var productAmount = orderResponse.orderData[i-1].product.amount;
+				var storeId = orderResponse.orderData[i-1].product.storeId;
 				
-			//var url = 'http://people.arcada.fi/~bomanbjo/DevOps/productJsonId=' + productId + '.json';
-			var url = 'http://product.arcada.nitor.zone/api/products.php?id=' + productId;
-				
-				
-			//makes the API-call for products
-			fetch(url).then(function(response2) {
-				// Convert to JSON   
-				return response2.json();
-				
-			}).then(function(productResponse) {
-				
-				//makes html code for floating boxes with tabeles in them 
+					
+				//console.log("TEST: "+productResponse.products[productId].picture); 
+			
 				myTable+= '<div class="floating-box"><table><tr><th colspan="2">Product lable to make boxes constant width</td></tr><tr><td rowspan="5"><img src="';
-				myTable+= productResponse.products[0].picture;//product image
+				myTable+= productResponse.products[productId].picture;//product image
 				myTable+= '" alt="';
-				myTable+= productResponse.products[0].name;//product image alt text
+				myTable+= productResponse.products[productId].name;//product image alt text
 				myTable+= '"  style="height:150px;"></td></tr><tr><td>';
-				myTable+= productResponse.products[0].name;//product name
+				myTable+= productResponse.products[productId].name;//product name
 				myTable+= '</td></tr><tr><td>';
-				myTable+= test["test"];//origin
+				myTable+= 'origin';//origin
 				myTable+= '</td></tr><tr><td>';
-				myTable+= productResponse.products[0].price;//price
+				myTable+= productResponse.products[productId].price;//price
 				myTable+= '€</td></tr><tr><td>Amount: ';
 				myTable+= productAmount;// amount
 				myTable+= 'pcs</td></tr><tr><td colspan="2">Total ';
-				myTable+= productResponse.products[0].price * productAmount;// totalprice
+				myTable+= orderResponse.orderData[i-1].product.price;// totalprice
+				//myTable+= productResponse.products[productId].price * productAmount;// totalprice
 				myTable+= '€</td></tr></table></div>';
 				
-				document.getElementById("orders-box").innerHTML = myTable;
-			})
+				
+			}
 			
-		}
-
+			//prints the list of orders
+			document.getElementById("orders-box").innerHTML = myTable;
+				
+		}).catch(function(error) {
+			
+			var errorMessageProducts = "<h1>An error has occured</h1></br><p>Please try again</p>";
+			document.getElementById("orders-box").innerHTML = errorMessage;
+			
+			console.log('There has been a problem in your PRODUCTS fetch operation: ' + error.message);
+		});
+		
+			
+		
+	}).catch(function(error) {
+		
+		var errorMessageOrders = "<h1>An error has occured</h1></br><p>Please try again</p>";
+		
+		document.getElementById("orders-box").innerHTML = errorMessage;
+		
+		console.log('There has been a problem in your ORDERS fetch operation: ' + error.message);
+		//return;
 	});
 	
 	/*
