@@ -4,36 +4,54 @@
 //function orders(token)
 function orders(){
 
-  /*
-  @dev nuff said. specify the domain which has the api.
-  */
-	try{
-		var token = window.localStorage.getItem(AuthToken);
-		var url = 'orders.arcada.nitor.zone/api/FetchAll?AuthToken="'+token+'"';
-	}catch(error){
-		var errorMessageOrders = "<h1>An error has occured</h1></br><p>Please try again</br>Invalid authToken</br>You may not be logged in</p>";
+	/*
+	@dev nuff said. specify the domain which has the api.
+	*/
+		try{
+			var token = window.localStorage.getItem(AuthToken);
+			var url = 'orders.arcada.nitor.zone/api/FetchAll?AuthToken="'+token+'"';
+		}catch(error){
+			var errorMessageOrders = "<h1>An error has occured</h1></br><p>Please try again</br>Invalid authToken</br>You may not be logged in</p>";
 		
-		document.getElementById("orders-box").innerHTML = errorMessage;
+			document.getElementById("orders-box").innerHTML = errorMessage;
 		
-		console.log('There has been a problem in your ORDERS fetch operation: ' + error.message);
-	}
+			console.log('There has been a problem in your ORDERS fetch operation: ' + error.message);
+		}
 
-  /*
-  @dev the function require a token in the parameter.
-       after using the token, all orders for specific token should be displayed.
-       the shipping information is displayed in a html id named shipping_info.
-  */
-  var jsonResponse;
-  var myTable = ""; 
+	/*
+	@dev the function require a token in the parameter.
+		after using the token, all orders for specific token should be displayed.
+		the shipping information is displayed in a html id named shipping_info.
+	*/
+	var jsonResponse;
+	var myTable = ""; 
   
-  //makes the API-call for orders
-  fetch(url).then(function(response) {
+	//makes the API-call for orders
+	fetch(url).then(function(response) {
 		// Convert to JSON   
 		return response.json();
 	}).then(function(orderResponse) {
 		// orderResponse is a javascript json object
 		console.log(orderResponse); 
 	
+		var jsonResponse = orderResponse.orderData;
+		
+		
+		//http://product.arcada.nitor.zone/api/products.php?id=0
+		//var url = 'http://people.arcada.fi/~bomanbjo/DevOps/productJsonId=' + productId + '.json';
+		
+		//http://product.arcada.nitor.zone/api/list-products.php?sort="id"
+		var url = 'http://people.arcada.fi/~bomanbjo/DevOps/productsReturnJson.json';
+			
+		//makes an Api-call to products to get the whole product-list
+		fetch(url).then(function(responseProduct) {
+			// Convert to JSON   
+			return responseProduct.json();
+				
+		}).then(function(productResponse) {
+			
+			console.log(productResponse); 
+				
 			//loop for oldest order first
 			/*for(i = 0;i < orderResponse.orderData.length; i++){
 				var productId = jsonResponse[i].product.id;
