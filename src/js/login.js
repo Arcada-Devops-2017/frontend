@@ -29,15 +29,12 @@ $(document).ready(function(){
          data: JSON.stringify(input),
          contentType: "text/plain",
          success: function (result) {
-           var obj = JSON.parse(result);
-           window.localStorage.setItem(AuthToken, obj.token);
            console.log(result);
-           alert("You have succefully registered through auth API.\nHTTP response status: " + obj.status);
+           alert("You have succefully registered through auth API.\nHTTP response status: ");
          },
          error: function (result) {
            console.log(result);
-           var obj = JSON.parse(result);
-           alert("Failed to registered through auth API.\nHTTP response status: " + obj.status);
+           alert("Failed to registered through auth API.\nHTTP response status: ");
          }
          });
     });
