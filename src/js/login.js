@@ -3,7 +3,7 @@
      variable that holds retrieved token.
 */
 $(document).ready(function(){
-    $("button[type*='submit']").click(function(){
+    $("button[id*='loginbtn']").click(function(){
 
       /*
       @dev set the authentication url, only works local (Arcada's network).
@@ -29,13 +29,15 @@ $(document).ready(function(){
          data: JSON.stringify(input),
          contentType: "text/plain",
          success: function (result) {
-           window.localStorage.setItem(AuthToken, result.token);
+           var obj = JSON.parse(result)
+           window.localStorage.setItem(AuthToken, obj.token);
            console.log(result)
-           alert("Successful execution.")
+           alert("You have succefully registered through auth API.\nHTTP response status: " + obj.status);
          },
          error: function (result) {
            console.log(result)
-           alert("Failure to execute:" + result.status)
+           var obj = JSON.parse(result);
+           alert("Failed to registered through auth API.\nHTTP response status: " + obj.status);
          }
          });
     });
