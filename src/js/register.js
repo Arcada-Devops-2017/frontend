@@ -1,3 +1,6 @@
+/*
+@dev should be working.
+*/
 $(document).ready(function(){
     $("button[class*='signupbtn']").click(function(){
       /*
@@ -28,11 +31,13 @@ $(document).ready(function(){
            @dev if success then redirect to homepage or login page for example.
            */
            console.log(result);
-           alert("You have succefully registered through auth API.\nHTTP response status: " + result.status + "\n" + result.token);
+           var obj = JSON.parse(result);
+           alert("You have succefully registered through auth API.\nHTTP response status: " + obj.status);
         },
          error: function(result){
            console.log(result);
-           alert("Failed to registered through auth API.\nHTTP response status: " + result.status);
+           var obj = JSON.parse(result);
+           alert("Failed to registered through auth API.\nHTTP response status: " + obj.status);
            /*
            @dev should alert the failure data.
            */

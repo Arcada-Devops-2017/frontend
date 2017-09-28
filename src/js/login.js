@@ -27,8 +27,7 @@ $(document).ready(function(){
          url: auth + "login.php",
          type: "POST",
          data: JSON.stringify(input),
-         dataType: 'application/json',
-         contentType: "application/json",
+         contentType: "text/plain",
          success: function (result) {
            window.localStorage.setItem(AuthToken, result.token);
            console.log(result)
