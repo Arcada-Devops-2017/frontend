@@ -18,24 +18,13 @@ function products(){
   */
   $.getJSON(url + "api/list-products.php", function(data) {
     $.each(data.products, function() {
-      var $image = $('<img src>').text(this.picture);
-      var $name = $('<h4>').text(this.price);
-      var $price = $('<span>').text(this.price);
-      var $description = this.description;
-
-
-      $("ul[class*='product_gallery']")
-      .append("<li>")
-      .append($image)
-      .append("<div class='product_information'>")
-      .append($name)
-      .append($price)
-      .append("</div>")
-      .append("<div class='product_description'>")
-      .append("<p>"+$description+"</p>")
-      .append("<a href='#' class='buy now'>Buy now</a>")
-      .append("</div>")
-      .append("</li>");
+      $("div[class*='flex-container wrap']")
+      .append("<div class='flex-item' onclick='document.getElementById('id01').style.display='block'' style='width:auto;'>")
+      .append("<p class='price'>" + this.price +"</p>")
+      .append("<div class='align-middle'>")
+      .append("<div class='product-image'>"+ this.picture +"</div>")
+      .append("<p class='product-name'>" + this.name +"</p>")
+      .append("<p class='product-origin'>" + this.category + "</p>\n</div>\n</div>");
     });
   });
 }
