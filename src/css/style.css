@@ -401,7 +401,7 @@ a:hover
   transition: transform 0.8s;
 }
 
-li:hover {
+#menu li:hover {
     background-color: #FCFCFC;
     border-radius: 5px 5px 5px 5px;
     width: 80px;
