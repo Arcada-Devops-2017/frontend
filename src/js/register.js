@@ -3,7 +3,7 @@ $(document).ready(function(){
       /*
       @dev set the authentication.
       */
-      var auth = "http://auth.arcada.nitor.zone/";
+      var auth = "http://auth.arcada.nitor.zone/register.php";
 
       /*
       @dev get input information from html fields.
@@ -19,7 +19,7 @@ $(document).ready(function(){
       @dev connect to url, convert data to JSON, post data.
       */
       $.ajax({
-         url: auth + "register.php",
+         url: auth,
          method: "POST",
          data: JSON.stringify(input),
          contentType: "application/json",
