@@ -3,7 +3,7 @@ $(document).ready(function(){
       /*
       @dev set the authentication.
       */
-      var auth = "http://auth.arcada.nitor.zone/register.php";
+      var auth = "http://auth.arcada.nitor.zone/";
 
       /*
       @dev get input information from html fields.
@@ -19,7 +19,7 @@ $(document).ready(function(){
       @dev connect to url, convert data to JSON, post data.
       */
       $.ajax({
-         url: auth,
+         url: auth + "register.php",
          method: "POST",
          data: JSON.stringify(input),
          contentType: "application/json",
@@ -28,11 +28,11 @@ $(document).ready(function(){
            @dev if success then redirect to homepage or login page for example.
            */
            console.log(result);
-           alert("You have succefully registered through auth API.\nHTTP response status: "result.status)
+           alert("You have succefully registered through auth API.\nHTTP response status: " + result.status);
         },
          error: function(result){
            console.log(result);
-           alert("Failed to registered through auth API.\nHTTP response status: "result.status)
+           alert("Failed to registered through auth API.\nHTTP response status: " + result.status);
            /*
            @dev should alert the failure data.
            */
