@@ -22,7 +22,7 @@ $(document).ready(function(){
          url: auth + "register.php",
          type: "POST",
          data: JSON.stringify(input),
-         contentType: "application/json",
+         contentType: "text/plain",
          success: function (result) {
            /*
            @dev if success then redirect to homepage or login page for example.
