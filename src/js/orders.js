@@ -11,9 +11,9 @@ function orders(){
 			var token = window.localStorage.getItem(AuthToken);
 			var url = 'orders.arcada.nitor.zone/api/FetchAll?AuthToken="'+token+'"';
 		}catch(error){
-			var errorMessageOrders = "<h1>An error has occured</h1></br><p>Please try again</br>Invalid authToken</br>You may not be logged in</p>";
+			var errorMessageAuth = "<h1>An error has occured</h1></br><p>Please try again</br>Invalid authToken</br>You may not be logged in</p>";
 		
-			document.getElementById("orders-box").innerHTML = errorMessage;
+			document.getElementById("orders-box").innerHTML = errorMessageAuth;
 		
 			console.log('There has been a problem in your ORDERS fetch operation: ' + error.message);
 		}
@@ -25,7 +25,7 @@ function orders(){
 	*/
 	var jsonResponse;
 	var myTable = ""; 
-  
+   
 	//makes the API-call for orders
 	fetch(url).then(function(response) {
 		// Convert to JSON   
@@ -95,7 +95,7 @@ function orders(){
 		}).catch(function(error) {
 			
 			var errorMessageProducts = "<h1>An error has occured</h1></br><p>Please try again</p>";
-			document.getElementById("orders-box").innerHTML = errorMessage;
+			document.getElementById("orders-box").innerHTML = errorMessageProducts;
 			
 			console.log('There has been a problem in your PRODUCTS fetch operation: ' + error.message);
 		});
@@ -106,7 +106,7 @@ function orders(){
 		
 		var errorMessageOrders = "<h1>An error has occured</h1></br><p>Please try again</p>";
 		
-		document.getElementById("orders-box").innerHTML = errorMessage;
+		document.getElementById("orders-box").innerHTML = errorMessageOrders;
 		
 		console.log('There has been a problem in your ORDERS fetch operation: ' + error.message);
 		//return;
