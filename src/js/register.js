@@ -20,7 +20,7 @@ $(document).ready(function(){
       */
       $.ajax({
          url: auth + "register.php",
-         method: "POST",
+         type: "POST",
          data: JSON.stringify(input),
          contentType: "application/json",
          success: function (result) {
