@@ -9,7 +9,7 @@ Test Template   Check If Menu Links Are Working
 Check Home Link              ${MENU INDEX}
 Check Products Link          ${MENU PRODUCTS}
 Check Login Link             ${MENU LOGIN}
-Check Sign Up Link           xpath=.//*[@id='login']/li
+Check Sign Up Link           ${MENU SIGN}
 
 *** Keywords ***
 Check If Menu Links Are Working
