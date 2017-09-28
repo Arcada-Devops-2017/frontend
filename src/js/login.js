@@ -15,7 +15,7 @@ $(document).ready(function(){
       */
       var input = {
         username: $("input[name*='username']").val(),
-        password: $("input[name*='lastname']").val()
+        password: $("input[name*='password']").val()
       }
 
       /*
