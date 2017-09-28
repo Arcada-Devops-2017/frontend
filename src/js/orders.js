@@ -8,7 +8,7 @@ function orders(){
 	@dev nuff said. specify the domain which has the api.
 	*/
 		try{
-			var token = window.localStorage.getItem(AuthToken);
+			var token = window.localStorage.getItem("authToken");
 			var url = 'orders.arcada.nitor.zone/api/FetchAll?AuthToken="'+token+'"';
 		}catch(error){
 			var errorMessageAuth = "<h1>An error has occured</h1></br><p>Please try again</br>Invalid authToken</br>You may not be logged in</p>";
