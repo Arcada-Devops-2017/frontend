@@ -30,11 +30,14 @@ $(document).ready(function(){
          contentType: "text/plain",
          success: function (result) {
            console.log(result);
-           alert("You have succefully registered through auth API.\nHTTP response status: ");
+           var obj = JSON.parse(result);
+           window.localStorage.setItem("authToken", obj.token);
+           alert("You have succefully registered through auth API.\nHTTP response status: " + obj.status);
          },
          error: function (result) {
            console.log(result);
-           alert("Failed to registered through auth API.\nHTTP response status: ");
+           var obj = JSON.parse(result);
+           alert("Failed to registered through auth API.\nHTTP response status: " + obj.status);
          }
          });
     });
