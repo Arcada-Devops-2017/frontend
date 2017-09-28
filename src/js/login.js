@@ -29,9 +29,9 @@ $(document).ready(function(){
          data: JSON.stringify(input),
          contentType: "text/plain",
          success: function (result) {
-           var obj = JSON.parse(result)
+           var obj = JSON.parse(result);
            window.localStorage.setItem(AuthToken, obj.token);
-           console.log(result)
+           console.log(result);
            alert("You have succefully registered through auth API.\nHTTP response status: " + obj.status);
          },
          error: function (result) {
