@@ -28,11 +28,11 @@ $(document).ready(function(){
            @dev if success then redirect to homepage or login page for example.
            */
            console.log(result);
-           alert("Successfully connected, status: " + result.status)
+           alert("You have succefully registered through auth API.\nHTTP response status: "result.status)
         },
          error: function(result){
            console.log(result);
-           alert("Error message: " + result.status)
+           alert("Failed to registered through auth API.\nHTTP response status: "result.status)
            /*
            @dev should alert the failure data.
            */
