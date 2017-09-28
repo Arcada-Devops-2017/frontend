@@ -74,7 +74,7 @@ body, html {
 
 .d {
   grid-column: 1 / 7;
-  grid-row: 40 / 25;
+  grid-row: 46 / 40;
 }
 
 
@@ -91,6 +91,11 @@ body, html {
   .c {
     grid-column: 1 / 7;
     grid-row: 39 / 25;
+  }
+
+  .d {
+    grid-column: 1 / 7;
+    grid-row: 52 / 54;
   }
 }
 
