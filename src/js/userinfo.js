@@ -37,9 +37,6 @@ function display_user() {
              .append("<label><b>Status</b></label>\n<p>OK</a></p>\n")
             return false;
            });
-
-
-
            /*
            console.log(result);
            var obj = JSON.parse(result);
@@ -47,10 +44,6 @@ function display_user() {
            $("p[id*='last_name']").append(obj.LastName);
            $("p[id*='username_id']").append(obj.Username);
            */
-        },
-        error: function (result){
-            alert("Code failed");
-            console.log(result);
         }
       });
     }
