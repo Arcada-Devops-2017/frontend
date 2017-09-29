@@ -23,7 +23,7 @@ function display_user() {
            /*
            @dev if success then redirect to homepage or login page for example.
            */
-           
+
            var obj = JSON.parse(result)
 
            /*

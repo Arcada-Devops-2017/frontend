@@ -2,13 +2,14 @@
 Library     Selenium2Library
 
 *** Variables ***
-${SERVER}         http://localhost:8000
-${BROWSER}        firefox
-${HOME URL}       ${SERVER}/index.html
-${LOGIN URL}      ${SERVER}/login.html
-${PRODUCTS URL}   ${SERVER}/products.html
-${SIGNUP URL}     ${SERVER}/signup.html
-${ORDERS URL}     ${SERVER}/orders.html
+${SERVER}            http://localhost:8000
+${BROWSER}           firefox
+${HOME URL}          ${SERVER}/index.html
+${LOGIN URL}         ${SERVER}/login.html
+${PRODUCTS URL}      ${SERVER}/products.html
+${SIGNUP URL}        ${SERVER}/signup.html
+${ORDERS URL}        ${SERVER}/orders.html
+${USERINFO URL}      ${SERVER}/userinfo.html 
 ${LINK MENU}          css=#menuToggle>input
 ${MENU SIGN}          xpath=.//*[@id='signup']/li
 ${MENU PRODUCTS}      xpath=.//*[@id='products']/li
