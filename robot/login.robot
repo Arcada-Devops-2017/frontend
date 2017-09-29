@@ -15,6 +15,8 @@ Login Check
     Input Text    xpath=.//*[@id='id01']/div/div[1]/input[1]    frontend@gmail.com
     Input Text    xpath=.//*[@id='id01']/div/div[1]/input[2]    demo
     Click Element    xpath=.//*[@id='loginbtn']
+    Choose Ok On Next Confirmation
+    Confirm Action
     Sleep    3
     Go To    ${USERINFO URL}
     Sleep    3

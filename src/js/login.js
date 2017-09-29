@@ -32,10 +32,12 @@ $(document).ready(function(){
            console.log(result);
            var obj = JSON.parse(result);
            window.localStorage.setItem("authToken", obj.token);
+           alert("Successful login, here is your token: " + obj.token);
          },
          error: function (result) {
            console.log(result);
            var obj = JSON.parse(result);
+           alert("Failed login");
          }
          });
     });
