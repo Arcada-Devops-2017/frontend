@@ -1,7 +1,7 @@
 *** Settings ***
 Library           Selenium2Library
 Resource          resource.robot
-Suite Setup       Open URL    ${USERINFO URL}
+Suite Setup       Go To    ${USERINFO URL}
 
 *** Test Cases ***
 
