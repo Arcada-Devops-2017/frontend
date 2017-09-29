@@ -1,4 +1,4 @@
-https://travis-ci.org/Arcada-Devops-2017/frontend.svg?branch=master
+[![Build Status](https://travis-ci.org/Arcada-Devops-2017/frontend.svg?branch=master)](https://travis-ci.org/Arcada-Devops-2017/frontend)
 
 # Front-end
 
