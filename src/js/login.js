@@ -32,14 +32,10 @@ $(document).ready(function(){
            console.log(result);
            var obj = JSON.parse(result);
            window.localStorage.setItem("authToken", obj.token);
-           alert("You have succefully registered through auth API.\nHTTP response status: " + obj.status +"\nHere is your token, man: " + obj.token);
-           var retrieve = window.localStorage.getItem("authToken");
-           alert(retrieve);
          },
          error: function (result) {
            console.log(result);
            var obj = JSON.parse(result);
-           alert("Failed to registered through auth API.\nHTTP response status: " + obj.status);
          }
          });
     });
