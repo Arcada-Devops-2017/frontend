@@ -17,3 +17,18 @@ Login Check
     Click Element    xpath=.//*[@id='loginbtn']
     Sleep    3
     Go To    ${USERINFO URL}
+    Sleep    3
+
+Check If Username Is Correct
+    Check If Strings Exist    xpath=.//*[@id='userinfo']/p[3]    frontend@gmail.com
+
+Check If Last Name Is Correct
+    Check If Strings Exist    xpath=.//*[@id='userinfo']/p[2]    member
+
+Check If First Name Is Correct
+    Check If Strings Exist    xpath=.//*[@id='userinfo']/p[1]    team
+
+*** Keywords ***
+Check If Strings Exist
+    [Arguments]               ${path}       ${string}
+    Element Text Should Be    ${path}       ${string}
