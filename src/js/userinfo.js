@@ -23,11 +23,34 @@ function display_user() {
            /*
            @dev if success then redirect to homepage or login page for example.
            */
+           
+           var obj = JSON.parse(result)
+
+           /*
+           @dev only loops through the first.
+           */
+           $.each(obj, function() {
+             $("div[id*='userinfo']")
+             .append("<label><b>First Name</b></label>\n<p>"+obj.FirstName+"</a></p>\n")
+             .append("<label><b>Last Name</b></label>\n<p>"+obj.LastName+"</a></p>\n")
+             .append("<label><b>Username</b></label>\n<p>"+obj.Username+"</a></p>\n")
+             .append("<label><b>Status</b></label>\n<p>OK</a></p>\n")
+            return false;
+           });
+
+
+
+           /*
            console.log(result);
            var obj = JSON.parse(result);
            $("p[id*='first_name']").append(obj.FirstName);
            $("p[id*='last_name']").append(obj.LastName);
            $("p[id*='username_id']").append(obj.Username);
+           */
+        },
+        error: function (result){
+            alert("Code failed");
+            console.log(result);
         }
       });
     }
