@@ -13,7 +13,6 @@ Contains EMAIL                           EMAIL
 Contains PASSWORD                        PASSWORD
 Contains Cancel                          Cancel
 Contains Sign Up                         Sign Up
-Contains SIGN UP HERE                    SIGN UP HERE
 
 *** Keywords ***
 Check If Strings Exist

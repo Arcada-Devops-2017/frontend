@@ -14,10 +14,10 @@ Cancel The Registration
 *** Keywords ***
 Register User Demo
     [Arguments]         ${firstname}          ${lastname}         ${email}          ${password}
-    Input Text    xpath=html/body/div[2]/div[3]/input[1]          ${firstname}
-    Input Text    xpath=html/body/div[2]/div[3]/input[2]          ${lastname}
-    Input Text    xpath=html/body/div[2]/div[3]/input[3]          ${email}
-    Input Text    xpath=html/body/div[2]/div[3]/input[4]          ${password}
+    Input Text    xpath=html/body/form/div/input[1]          ${firstname}
+    Input Text    xpath=html/body/form/div/input[2]          ${lastname}
+    Input Text    xpath=html/body/form/div/input[3]          ${email}
+    Input Text    xpath=html/body/form/div/input[4]          ${password}
 
 Cancel Registration
-    Click Element    xpath=html/body/div[2]/div[3]/div/button[1]
+    Click Element    xpath=html/body/form/div/div/button[2]
