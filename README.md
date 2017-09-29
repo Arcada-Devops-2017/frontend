@@ -1,3 +1,5 @@
+https://travis-ci.org/Arcada-Devops-2017/frontend.svg?branch=master
+
 # Front-end
 
 Run UI through various test environments before deployment.
