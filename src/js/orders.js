@@ -9,7 +9,7 @@ function orders(){
 	*/
 		try{
 			var token = window.localStorage.getItem("authToken");
-			var url = 'orders.arcada.nitor.zone/api/FetchAll?AuthToken="'+token+'"';
+			var url = 'http://orders.arcada.nitor.zone/api/FetchAll?AuthToken="' + token + '"';
 		}catch(error){
 			var errorMessageAuth = "<h1>An error has occured</h1></br><p>Please try again</br>Invalid authToken</br>You may not be logged in</p>";
 		
