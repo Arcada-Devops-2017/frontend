@@ -18,7 +18,7 @@
     background: #E3D985;
     padding: 5px;
     width: 250px;
-    height: 350px;
+    height: 378px;
     margin: 10px;
     color: white;
     font-size: 1em;
@@ -65,11 +65,12 @@
     height: 15%;
     z-index: 2;*/
 
+    background-image: url("../media/corona.png");
     border-radius: 5px;
     margin-top: 13px;
-    padding: 100px;
+    padding: 125px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     position: relative;
 }
 
@@ -82,7 +83,52 @@
     text-align: center;
 }
 
+.product-category {
+    text-align: center;
+}
+
+.tags {
+    font-size: 0.8em;
+    color: grey;
+}
+
 /*PRODUCT POPUP*/
+
+.information-box {
+    position: relative;
+    left: 15em;
+    color: black;
+    margin-bottom: -11em;
+    top: -14em;
+}
+
+.price-preview {
+   color: #E3D985;
+   font-style: bold;
+}
+
+.box {
+    width: 6em;
+}
+.description {
+    width: 21em;
+} 
+
+.product-name-preview {
+    
+}
+
+.product-origin-preview {
+   
+}
+
+.availability {
+    position: relative;
+    right: 12em;
+    bottom: 12em;
+}
+
+
     
     input[type=text], input[type=password] {
       width: 100%;
