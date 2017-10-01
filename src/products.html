@@ -95,7 +95,24 @@
                           <li class="red" onload="checkAvailable();">hurr hurr2 - shop</li>
                         </ul>
                     </div>
+                <div class="placeAmount">
+                  <a href="#" onclick="addAmount();">
+                    <div class="plus">
+                      <h1 class="wrap" onclick="">&#43;</h1><!--plus sign-->
+                    </div>
+                  </a>
+                  <div class="amount">
+                      <h1 class="wrap" id="amountOrder">500</h1><!--amount-->
                   </div>
+                  <a href="#" onclick="removeAmount();">
+                    <div class="minus">
+                      <h1 class="wrap" onclick="">&#45;</h1><!--minus sign-->
+                    </div>
+                  </a>
+                </div>
+
+                  </div> <!--end of information box-->
+                    <input id="number" type="number">
                     <button type="button" class="button" onclick="addToCart();">Buy</button>
                 </div>
               </div>
@@ -205,7 +222,7 @@
       
 
 
-<script>
+  <script>
     //NAVBAR JS MAGIC
     /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
     function myFunction() {
@@ -241,8 +258,26 @@
          modal3.style.display = "none";
         }
      }
-            </script>
-        </script>
+
+    //JS for adding the amounts of x beer
+    function addAmount() {
+      var amount = document.getElementById('amountOrder').innerHTML;
+    var amountInt = parseFloat(amount);
+      var newAmount = amountInt + 100;
+      //document.getElementById('amountOrder').value = +1 + +amount;
+      //amountOrder.innerText = newAmount;
+      document.getElementById("amountOrder").innerHTML = newAmount;
+    }
+
+    function removeAmount() {
+      var amount = document.getElementById('amountOrder').innerHTML;
+    var amountInt = parseFloat(amount);
+      var newAmount = amountInt - 100;
+      //document.getElementById('amountOrder').value = -1 - -amount;
+      //amountOrder.innerText = newAmount;
+      document.getElementById("amountOrder").innerHTML = newAmount;
+    }
+  </script>
 </body>      
 
 <html>

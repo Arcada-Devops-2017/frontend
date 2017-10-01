@@ -13,6 +13,15 @@ body, html {
   margin: 0.5em;
 }
 
+.no-limits {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+}
+
 .footer {
   background-color: #E3D985;
   color: white;
@@ -33,20 +42,24 @@ body, html {
 }
 
 .box2 {
-  background-color: #ffb997;
+  background-image: url("../media/beer1.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
   color: #fff;
   border-radius: 5px;
   padding: 20px;
-  font-size: 150%;
+  font-size: 2em;
 
 }
 
 .box3 {
-  background-color: #444;
+  background-image: url("../media/login.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
   color: #fff;
   border-radius: 5px;
   padding: 20px;
-  font-size: 150%;
+  font-size: 2em;
 
 }
 

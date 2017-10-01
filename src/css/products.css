@@ -37,9 +37,10 @@
 }
 
 .price {
-    font-size: 1em;
+    font-size: 2em;
     float: left;
     top: 0;
+    font-style: bold;
 }
 
 .align-middle {
@@ -132,6 +133,43 @@
 
 .red {
     color: red;
+}
+
+#number {
+    border: 1px lightsalmon;
+}
+
+.placeAmount {
+    background-color: #E3D985;
+    padding: 0.5em;
+    width: 40%;
+    color: white;
+}
+
+.plus {
+    background-color: #E3D985;
+    padding: 0.5em;
+    padding-left: 1em;
+    display: inline-block;
+    font-size: 1.5em;
+    color: white;
+}
+
+.amount {
+    background-color: #E3D985;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: inline-block;
+}
+
+.minus {
+    background-color: #E3D985;
+    padding: 0.5em;
+    padding-left: 1em;
+    display: inline-block;
+    font-size: 1.5em;
+    color: white;
 }
 
 
