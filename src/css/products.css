@@ -98,8 +98,8 @@
     position: relative;
     left: 15em;
     color: black;
-    margin-bottom: -11em;
-    top: -14em;
+    margin-bottom: -13em;
+    top: -17em;
 }
 
 .price-preview {
@@ -124,8 +124,14 @@
 
 .availability {
     position: relative;
-    right: 12em;
-    bottom: 12em;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
 }
 
 
