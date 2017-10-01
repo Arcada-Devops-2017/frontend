@@ -4,7 +4,7 @@
 products();
 
 function productStrings(products, i) {
-  var products = "
+  var products = " \
       <div class='flex-item' onclick='document.getElementById('product"+products[i].id+"').style.display='block'' style='width:auto;'> \
         <p class='price'>"+products[i].price+"</p> \
         <div class='align-middle'> \
