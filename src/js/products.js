@@ -5,38 +5,38 @@ products();
 
 function productStrings(products, i) {
   var products = "
-      <div class='flex-item' onclick='document.getElementById('product"+products[i].id+"').style.display='block'' style='width:auto;'>\
-        <p class='price'>"+products[i].price+"</p>\
-        <div class='align-middle'>\
-            <div class='product-image'>"+products[i].picture+"</div>\
-            <p class='product-name'>"+products[i].name+"</p>\
-            <p class='product-origin'></p>\
-            <p class='product-category'>"+products[i].category+"</p>\
-        </div>\
-        <div id='product"+products[i].id+"' class='modal'>\
-          <div class='modal-content animate'>\
-            <div class='container'>\
-                <div class='preview-image'>"+products[i].picture+"</div>\
-              <div class='information-box'>\
-                  <h1 class='price-preview'>"+products[i].price+"</h1>\
-                  <p class='product-name-preview'>"+products[i].name+"</p>\
-                  <p class='product-category-preview'>"+products[i].category+"</p>\
-                  <p class='product-origin-preview'></p>\
-                  <p class='description'>"+products[i].description+"</p>\
-                  <p class='tags'>"+products[i].tags+"</p>\
-                <div class='availability'>\
-                  <h3>Available in</h3>\
-                    <ul>\
-                      <li class='green' onload='checkAvailable();'>hurr hurr - shop</li>\
-                      <li class='red' onload='checkAvailable();'>hurr hurr2 - shop</li>\
-                    </ul>\
-                </div>\
-              </div>\
-                <button type='button' class='button' onclick='addToCart();'>Buy</button>\
-            </div>\
-          </div>\
-        </div>\
-      </div>\
+      <div class='flex-item' onclick='document.getElementById('product"+products[i].id+"').style.display='block'' style='width:auto;'> \
+        <p class='price'>"+products[i].price+"</p> \
+        <div class='align-middle'> \
+            <div class='product-image'>"+products[i].picture+"</div> \
+            <p class='product-name'>"+products[i].name+"</p> \
+            <p class='product-origin'></p> \
+            <p class='product-category'>"+products[i].category+"</p> \
+        </div> \
+        <div id='product"+products[i].id+"' class='modal'> \
+          <div class='modal-content animate'> \
+            <div class='container'> \
+                <div class='preview-image'>"+products[i].picture+"</div> \
+              <div class='information-box'> \
+                  <h1 class='price-preview'>"+products[i].price+"</h1> \
+                  <p class='product-name-preview'>"+products[i].name+"</p> \
+                  <p class='product-category-preview'>"+products[i].category+"</p> \
+                  <p class='product-origin-preview'></p> \
+                  <p class='description'>"+products[i].description+"</p> \
+                  <p class='tags'>"+products[i].tags+"</p> \
+                <div class='availability'> \
+                  <h3>Available in</h3> \
+                    <ul> \
+                      <li class='green' onload='checkAvailable();'>hurr hurr - shop</li> \
+                      <li class='red' onload='checkAvailable();'>hurr hurr2 - shop</li> \
+                    </ul> \
+                </div> \
+              </div> \
+                <button type='button' class='button' onclick='addToCart();'>Buy</button> \
+            </div> \
+          </div> \
+        </div> \
+      </div> \
       ";
       return products;
 }
