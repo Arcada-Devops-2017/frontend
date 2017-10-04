@@ -33,7 +33,8 @@ $(document).ready(function(){
            console.log(result);
            var obj = JSON.parse(result);
            alert("You have succefully registered through auth API.\nHTTP response status: " + obj.status);
-        },
+           window.location.href = "http://frontend.arcada.nitor.zone/index.html";
+		 },
          error: function(result){
            console.log(result);
            var obj = JSON.parse(result);
