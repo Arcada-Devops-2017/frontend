@@ -31,10 +31,10 @@ function display_user() {
            */
            $.each(obj, function() {
              $("div[id*='userinfo']")
-             .append("<label><b>First Name</b></label>\n<p>"+obj.FirstName+"</a></p>\n")
-             .append("<label><b>Last Name</b></label>\n<p>"+obj.LastName+"</a></p>\n")
-             .append("<label><b>Username</b></label>\n<p>"+obj.Username+"</a></p>\n")
-             .append("<label><b>Status</b></label>\n<p>OK</a></p>\n")
+             .append("<label><b>First Name</b></label>\n<p>"+obj.first_name+"</a></p>\n")
+             .append("<label><b>Last Name</b></label>\n<p>"+obj.last_name+"</a></p>\n")
+             .append("<label><b>Username</b></label>\n<p>"+obj.username+"</a></p>\n")
+             .append("<label><b>Status</b></label>\n<p>"+obj.status+"</a></p>\n")
             return false;
            });
            /*
